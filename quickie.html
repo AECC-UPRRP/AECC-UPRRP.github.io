@@ -3,14 +3,31 @@
 
 <head>
 
-	<title></title>
+	<title>AECC-Presentation</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script src="js/hack.js"></script>
 </head>
 
-<body>
+<body style="text-align:center">
 	<h1>OH HAI</h1>
 	<img style="width:20em;height:30em" src="http://i.imgur.com/n58bNtl.jpg"></img>
 	<p> HTML stands for hypertext markup language. You should now that HTML is not a programming language, instead it is a markup language. Markup languages	deal with processing and presenting text. On the other hand, programming languages have flow control structures that allow them to process and manipulate data, make decisions, and execute instructions.</p>
+    
+    <button id="click" type="button" onclick="hello()">Start Hacking!</button>
 
 </body>
+
+<div id="start" style="display:none">
+    <form>
+        Enter 4 digit pin here to hack the interwebz:<br>
+        <input id="pin" type="number" value="XXXX" min="0" step="1" pattern="^[0-9]">
+        <input id="hack"type="submit" value="Hack!" onclick="hello()">
+    </form>
+</div>
+
+<div id="hack" style="display:none">
+    <h1>Congratulations!</h1>
+    <p>You have successfully hacked the internet!</p>
+</div>
 
 </html>
