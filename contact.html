@@ -94,7 +94,7 @@
                     <br> 00936
                     <br> </p>
                 <p><i class="fa fa-phone"></i> <abbr title="Phone"></abbr>: 787-764-0000 EXT 88018</p>
-                <p><i class="fa fa-envelope-o"></i> <abbr title="Email"></abbr>: <a href="mailto:aecc.upr@gmail.com">aecc.rp@upr.edu</a> </p>
+                <p><i class="fa fa-envelope-o"></i> <abbr title="Email"></abbr>: <a href="mailto:aecc.upr@gmail.com">aecc.upr@gmail.com</a> </p>
                 <p><i class="fa fa-clock-o"></i> <abbr title="Hours"></abbr>: Monday - Friday: 10:00 AM to 6:00 PM</p>
                 <ul class="list-unstyled list-inline list-social-icons">
                     <li> <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a> </li>
@@ -118,33 +118,33 @@
         <div class="row">
             <div class="col-md-8">
                 <h3>Send us a Message</h3>
-                <form name="sentMessage" id="contactForm" novalidate>
+                <form name="sentMessage" action="https://formspree.io/aecc.upr@gmail.com" method="POST" novalidate>
+                    
+                    <input type="hidden" name="_subject" value="New message for AECC-UPRRP!" />
+                    
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Full Name:</label>
-                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                            <input type="text" class="form-control" id="name" name="Full Name" required data-validation-required-message="Please enter your name.">
                             <p class="help-block"></p>
                         </div>
                     </div>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Phone Number:</label>
-                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number."> </div>
-                    </div>
+                    
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Email Address:</label>
-                            <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address."> </div>
+                            <input type="email" class="form-control" id="email" name="email" required data-validation-required-message="Please enter your email address."> </div>
                     </div>
+                    
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Message:</label>
-                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                            <textarea rows="10" cols="100" class="form-control" id="message" name="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
                         </div>
                     </div>
                     <div id="success"></div>
                     <!-- For success/fail messages -->
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary" value="Send">Send Message</button>
                 </form>
             </div>
         </div>
