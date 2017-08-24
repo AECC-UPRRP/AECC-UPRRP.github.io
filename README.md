@@ -6,13 +6,14 @@ Please comment your edits!
 
 Modules (To do):
 - Ordenes de camisas (Store)
-- Resources Section (Presentations)
+- Automatic pull of member info from forms (Google sheets)
+- Subscription (Membership)
 - Sponsors (Easy removal)
 - Weekly challenges scoreboard
 - Posible members section with pictures, preparation and interests.
 
 Modules (Done):
-- Subscription (Membership)
+- Resources Section (Presentations)
 - Jumbotron de eventos, noticias y promos
 - Contactos 
 - Map (localization)
