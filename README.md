@@ -19,5 +19,11 @@ Modules (Done):
 - Map (localization)
 - Calendar
 
+Styles (To do):
+- Standarize image size
+- Acquire higher resolution images
+- Fix element sizing on landing page
+- Increase size of Announcements box
+
 Technologies for build:
 - HTML, CSS, Bootstrap
