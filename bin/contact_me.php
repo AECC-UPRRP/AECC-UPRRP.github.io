@@ -16,7 +16,7 @@ $email_address = $_POST['email'];
 $message = $_POST['message'];
 	
 // create email body and send it	
-$to = 'aecc.upr@gmail.com'; // PUT YOUR EMAIL ADDRESS HERE
+$to = 'aecc.rp@upr.edu'; // PUT YOUR EMAIL ADDRESS HERE
 $email_subject = "AECC-UPRRP Contact Form:  $name"; // EDIT THE EMAIL SUBJECT LINE HERE
 $email_body = "You have received a new message from your website's contact form.\n\n"."Here are the details:\n\nName: $name\n\nPhone: $phone\n\nEmail: $email_address\n\nMessage:\n$message";
 $headers = "From: noreply@your-domain.com\n";
