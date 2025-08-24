@@ -8,79 +8,23 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>AECC-UPRRP - Home</title>
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="css/modern-business.css" rel="stylesheet">
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body>
-    <!--Navigation Bar  -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-                    <span class="icon-bar"></span> </button>
-                <a class="navbar-brand" href="index.html" style="padding: .45em;">
-                    <img src="images/aecc-logo.png" alt="Logo AECC"
-                         style="width:1.8em;height:1.8em;border:0.1em solid #aaaaaa; border-radius: 0.3em;
-                                 display: inline; margin: 0em 0.2em 0.2em 0em; " />AECC@UPRRP</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li> <a href="/index.html">Home</a> </li>
-                    <li> <a href="about.html">About us</a> </li>
-                    <!--- Commenting out services from the nav bar for now
-                    <li>
-                        <a href="services.html">Services</a>
-                    </li> -->
-                    <li> <a href="contact.html">Contact us</a> </li>
-                    <li> <a href="portfolio.html">Our Portfolio</a> </li>
-                    <li> <a href="blog.html">Announcements</a> </li>
-                    <li> <a href="activities.html">Activities</a> </li>
-                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li> <a href="https://www.facebook.com/aeccupr/">Our Facebook Page</a> </li>
-                            <li> <a href="https://www.facebook.com/includeGirls/">Include Girls UPRRP's FB page</a> </li>
-                            <li> <a href="faq.html">FAQ</a> </li>
-                            <li> <a href="pricing.html">Store</a> </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+
+    <!-- /////////////////////// navbar /////////////////////// -->
+    <div id="navbar"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => console.error('Error al cargar el navbar:', error));
+    </script>
+    <!-- /////////////////////// navbar /////////////////////// -->
+
+    <!-- /////////////////////// Carrusel de imágenes /////////////////////// -->
     <!-- Header Carousel -->
     <header id="myCarousel" class="carousel slide">
         <!-- Indicators -->
@@ -93,38 +37,40 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <div class="fill" style="background-image:url('images/feria-2016.jpg'); padding-bottom: 60%;"></div>
+                <div class="fill" style="background-image:url('images/confra2023.JPG'); padding-bottom: 20%;"></div>
                 <div class="carousel-caption">
-                    <h2 style="color: #EFF; text-shadow: 0.5em 0.5em 0.5em #111">UPRRP Student Organization Fair 2016-2017</h2> </div>
+                    <h2 style="color: #EFF; text-shadow: 0.5em 0.5em 0.5em #111">UPRRP Student Organization Fair 2023-24</h2> </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('http://ccom.uprrp.edu/~acm/wp-content/uploads/2014/01/acm-fb-banner.png');"></div>
+                <div class="fill" style="background-image:url('images/competencia_bayamon.png');"></div>
                 <div class="carousel-caption">
-                    <h2 style="color: #010; text-shadow: 0.5em 0.5em 0.5em #111">Official ACM Chapter</h2> </div>
+                    <h2 style="color: #EFF; text-shadow: 0.5em 0.5em 0.5em #111">Bayamón programming competence</h2> </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('images/hackpr-2016.jpg'); padding-bottom: 50%"></div>
+                <div class="fill" style="background-image:url('images/hackton.JPG'); padding-bottom: 40%"></div>
                 <div class="carousel-caption">
-                    <h2 style="color: #EFF; text-shadow: 0.5em 0.5em 0.5em #111">Our members at HackPR 2016</h2> </div>
+                    <h2 style="color: #EFF; text-shadow: 0.5em 0.5em 0.5em #111">Our members at HackPR</h2> </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('images/unity-1.jpg'); padding-bottom: 55%;"></div>
+                <div class="fill" style="background-image:url('images/natuween2023.png'); padding-bottom: 55%;"></div>
                 <div class="carousel-caption">
-                    <h2 style="color: #EFF; text-shadow: 0.5em 0.5em 0.5em #111">Full House at the Unity VR Workshop!</h2> </div>
+                    <h2 style="color: #EFF; text-shadow: 0.5em 0.5em 0.5em #111">Natuween 2023</h2> </div>
             </div>
         </div>
         <!-- Controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev"> <span class="icon-prev"></span> </a>
         <a class="right carousel-control" href="#myCarousel" data-slide="next"> <span class="icon-next"></span> </a>
     </header>
+    <!-- /////////////////////// Carrusel de imágenes /////////////////////// -->
+ 
     <!-- Page Content -->
     <div class="container">
         <!-- Welcome message -->
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    The 2019-20's AECC (Asociación Estudiantil de Ciencia de Cómputos) welcomes you to its official landing page.<br>
-                    <small><em>Here you can learn more about our plans for the 2019-20 academic year.</em></small>
+                    The 2024-25's AECC (Asociación Estudiantil de Ciencia de Cómputos) welcomes you to its official landing page.<br>
+                    <small><em>Here you can learn more about our plans for the 2024-25 academic year.</em></small>
                 </h1> </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
@@ -164,22 +110,22 @@
             <div class="col-lg-12">
                 <h2 class="page-header">This is what we do: </h2> </div>
             <div class="col-md-4 col-sm-6">
-                <a href="/images/primera-2016.jpg"> <img style="max-height:450px;" class="img-responsive img-portfolio img-hover" src="images/primera-2016.jpg" alt=""> </a>
+                <a href="images/primera-2016.jpg"> <img style="max-height:450px;" class="img-responsive img-portfolio img-hover" src="images/primera-2016.jpg" alt=""> </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                <a href="/images/orientacion-prepas-2016.jpg"> <img style="max-height:450px;" class="img-responsive img-portfolio img-hover" src="images/orientacion-prepas-2016.jpg" alt=""> </a>
+                <a href="images/orientacion-prepas-2016.jpg"> <img style="max-height:450px;" class="img-responsive img-portfolio img-hover" src="images/orientacion-prepas-2016.jpg" alt=""> </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                <a href="/images/unity-selfie.jpg"> <img style="max-height:450px;" class="img-responsive img-portfolio img-hover" src="images/unity-selfie.jpg" alt=""> </a>
+                <a href="images/unity-selfie.jpg"> <img style="max-height:450px;" class="img-responsive img-portfolio img-hover" src="images/unity-selfie.jpg" alt=""> </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                <a href="/images/include-2016-2.jpg"> <img class="img-responsive img-portfolio img-hover" src="images/include-2016-2.jpg" alt=""> </a>
+                <a href="images/include-2016-2.jpg"> <img class="img-responsive img-portfolio img-hover" src="images/include-2016-2.jpg" alt=""> </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                <a href="/images/hack.gif"> <img class="img-responsive img-portfolio img-hover" src="images/hack.gif" alt=""> </a>
+                <a href="images/hack.gif"> <img class="img-responsive img-portfolio img-hover" src="images/hack.gif" alt=""> </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                <a href="/images/unity-2.jpg"> <img class="img-responsive img-portfolio img-hover" src="images/unity-2.jpg" alt=""> </a>
+                <a href="images/unity-2.jpg"> <img class="img-responsive img-portfolio img-hover" src="images/unity-2.jpg" alt=""> </a>
             </div>
         </div>
         <!-- /.row -->
@@ -191,7 +137,7 @@
                     <br>
                     <p class="text-justify">Want to join? <strong>Become a member of the AECC.</strong></p>
                 </div>
-                <div class="col-md-4"> <a class="btn btn-lg btn-primary btn-block" href="/signup.html"> Join! </a> </div>
+                <div class="col-md-4"> <a class="btn btn-lg btn-primary btn-block" href="signup.html"> Join! </a> </div>
                 <!--  This is currently breaks alignment and is kind of redundant since it is covered in the FAQ
                 <div class="col-md-8">
                     <p class="text-justify"> We recommend you learn more about the ACM! </p>
@@ -209,13 +155,13 @@
                         <a href="https://aecc-uprrp.github.io/faq.html"><strong>our FAQ.</strong></a>
                     </p>
                 </div>
-                <div class="col-md-4">
-                    <a class="btn btn-lg btn-primary btn-block" href="https://campus.acm.org/public/qj/quickjoin/qj_control.cfm?promo=PWEBTOP&form_type=Student"> Join ACM and AECC! </a> </div>
+                <!-- <div class="col-md-4">
+                    <a class="btn btn-lg btn-primary btn-block" href="https://campus.acm.org/public/qj/quickjoin/qj_control.cfm?promo=PWEBTOP&form_type=Student"> Join ACM and AECC! </a> </div> -->
                 <div class="col-md-8">
                     <p class="text-justify">If you have any questions about us or our memberships check our our
                         <a href="./faq.html">FAQ</a>, <a href=""></a></p>
                 </div>
-                <div class="col-md-4"> <a class="btn btn-lg btn-default btn-block" href="/donate.html">Sponsor or Donate</a> </div>
+                <div class="col-md-4"> <a class="btn btn-lg btn-default btn-block" href="donate.html">Sponsor or Donate</a> </div>
             </div>
         </div>
         <hr>
@@ -223,7 +169,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; AECC-UPRRP 2018
+                    <p>Copyright &copy; AECC-UPRRP 2025
                         <br>Using The Modern Business template by Start Bootstrap</p>
                 </div>
             </div>

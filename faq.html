@@ -8,79 +8,23 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>AECC-UPRRP - FAQ</title>
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="css/modern-business.css" rel="stylesheet">
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body>
-    <!--Navigation Bar  -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-                    <span class="icon-bar"></span> </button>
-                <a class="navbar-brand" href="index.html" style="padding: .45em;">
-                    <img src="images/aecc-logo.png" alt="Logo AECC"
-                         style="width:1.8em;height:1.8em;border:0.1em solid #aaaaaa; border-radius: 0.3em;
-                                 display: inline; margin: 0em 0.2em 0.2em 0em; " />AECC@UPRRP</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li> <a href="/index.html">Home</a> </li>
-                    <li> <a href="about.html">About us</a> </li>
-                    <!--- Commenting out services from the nav bar for now
-                    <li>
-                        <a href="services.html">Services</a>
-                    </li> -->
-                    <li> <a href="contact.html">Contact us</a> </li>
-                    <li> <a href="portfolio.html">Our Portfolio</a> </li>
-                    <li> <a href="blog.html">Announcements</a> </li>
-                    <li> <a href="activities.html">Activities</a> </li>
-                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li> <a href="https://www.facebook.com/aeccupr/">Our Facebook Page</a> </li>
-                            <li> <a href="https://www.facebook.com/includeGirls/">Include Girls UPRRP's FB page</a> </li>
-                            <li> <a href="faq.html">FAQ</a> </li>
-                            <li> <a href="pricing.html">Store</a> </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+
+    <!-- /////////////////////// navbar /////////////////////// -->
+    <div id="navbar"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => console.error('Error al cargar el navbar:', error));
+    </script>
+    <!-- /////////////////////// navbar /////////////////////// -->
+
+
     <!-- Page Content -->
     <div class="container">
         <!-- Page Heading/Breadcrumbs -->
@@ -108,7 +52,11 @@
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse00">What does the AECC do?</a>
                             </h4> </div>
                         <div id="collapse00" class="spanel-collapse collapse">
-                            <div class="panel-body"> Our association, The Student Association of Computer Science (AECC for our acronym in spanish), is committed to providing all computer science students with the space and tools necessary to educate and develop themselves according to their interests and the careers that they want to pursue in the future. By making workshops, fundraising activities, hackathons, and other events possible, we want to establish a solid community of excellent computer science students in Puerto Rico and future prepared professionals in the workforce. </div>
+                            <div class="panel-body"> Our association, The Student Association of Computer Science (AECC for our acronym in spanish), is committed 
+                                to providing all computer science students with the space and tools necessary to educate and develop themselves according to their 
+                                interests and the careers that they want to pursue in the future. By making workshops, fundraising activities, hackathons, and other
+                                 events possible, we want to establish a solid community of excellent computer science students in Puerto Rico and future prepared 
+                                 professionals in the workforce. </div>
                         </div>
                     </div>
                     <br>
@@ -129,14 +77,14 @@
                                     <li>Complimentary microwave usage</li>
                                     <li>Access to the AECC's physical and digital library, free of charge</li>
                                     <li>Membership to the AECC's mailing list</li>
-                                    <li>Membership to the UPRRP's ACM Chapter and all the benefits that an ACM membership entails</li>
+                                    <!-- <li>Membership to the UPRRP's ACM Chapter and all the benefits that an ACM membership entails</li> -->
                                 </ul>
-                                <br> Payment of the $5 annual AECC membership grants you all the benefits mentioned above except the ACM membership and all of it's benefits. </div>
+                                <br> Payment of the $5 annual AECC membership grants you all the benefits mentioned above. </div>
                         </div>
                     </div>
                 </div>
                 <!-- /.panel -->
-                <div class="panel panel-default">
+                <!-- <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">What is the ACM?</a>
@@ -144,9 +92,9 @@
                     <div id="collapseThree" class="panel-collapse collapse">
                         <div class="panel-body"> The <strong>Association for Computing Machinery</strong> is the world's largest computing association. Comprised of various chapters around the world, its purpose is to unite computing associations worldwide and raise awareness about the technical, educational, and social issues in the world of technlology. ACM supports the professional growth of its members by providing opportunities for life‐long learning, career development, and professional networking. <a href="http://www.acm.org/about-acm/about-the-acm-organization" target="_blank"><strong>We recommend you learn more about the ACM from their site!</strong></a> </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- /.panel -->
-                <div class="panel panel-default">
+                <!-- <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">What are the benefits of being a member of the ACM?</a>
@@ -162,7 +110,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <h2> Other issues</h2>
                 <!-- /.panel -->
                 <div class="panel panel-default">
