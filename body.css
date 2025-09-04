@@ -2,24 +2,15 @@
 	box-sizing: border-box;
 }
 
-:root {
-	--red: #ff2000ff;
-	--red-s: #bf1800ff;
-	--green: #d2ff61ff;
-	--green-s: #9ebf49ff;
-	--cyan: #25f2e8ff;
-	--cyan-s: #1cb6aeff;
-	--pink: #ea76cbff;
-	--pink-s: #bf6299ff;
-	--light: #f2f4fb;
-	--dark: #1f1e2e;
-	--border: 1px solid var(--green-s);
+::selection {
+	color: var(--green);
+	background: var(--text);
 }
 
 body {
 	margin: 0;
-	color: var(--dark);
-	background: var(--light);
+	color: var(--text);
+	background: var(--background);
 	font-family: mononoki;
 }
 
@@ -27,8 +18,8 @@ a {
 	text-decoration: none;
 	cursor: pointer;
 	padding: 0 1ch;
-	color: var(--dark);
-	background: var(--cyan);
+	color: var(--background);
+	background: var(--cyan-s);
 
 	&:hover {
 		text-decoration: underline;
@@ -43,26 +34,34 @@ h4 {
 }
 
 button {
-	background: var(--light);
+	background: var(--text);
+	color: var(--background);
 	font-family: inherit;
 	font-size: inherit;
 	padding: 0 1ch;
-	border: 1px solid var(--dark);
+	border: none;
 
 	&:hover {
-		color: var(--light);
-		background: var(--red-s);
+		color: var(--background);
+		background: var(--red);
 	}
 }
 
 header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	border: var(--border);
 	margin: 10px;
 	padding: 10px;
+}
 
+/* container for terminal text on header */
+.aecc-container {
 	a.aecc {
-		background: var(--dark);
-		color: var(--light);
+		text-decoration: underline;
+		background: none;
+		color: var(--text);
 		cursor: pointer;
 	}
 
@@ -97,7 +96,11 @@ header {
 }
 
 nav {
-	display: inline;
+	display: inline-block;
+}
+
+.theme-toggle {
+	display: inline-block;
 }
 
 /* animacion para el blink del header */

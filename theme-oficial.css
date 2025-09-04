@@ -1,0 +1,24 @@
+/* colores oficiales */
+
+:root {
+	--red: #ff2000;
+	--red-s: #bf1800;
+	--green: #d2ff61;
+	--green-s: #9ebf49;
+	--cyan: #25f2e8;
+	--cyan-s: #1cb6ae;
+	--pink: #ea76cb;
+	--pink-s: #bf6299;
+	--background: #f2f4fb;
+	--text: #1f1e2e;
+	--text-s: #7f7f86;
+	--border: 1px solid var(--text-s);
+}
+
+.aecc-container {
+	a.aecc {
+		text-decoration: none;
+		background: var(--text);
+		color: var(--background);
+	}
+}

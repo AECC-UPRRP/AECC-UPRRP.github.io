@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- 
+referencias:
+
+mononoki font: madmalik.github.io/mononoki/
+ -->
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="body.css">
+   <link class="css-link" rel="stylesheet" href="theme-catppuccin.css">
    <title>AECC homepage</title>
 </head>
 
 <body>
    <header>
-      <!-- AECC path text blink -->
-      <a href="/" title="homepage" class="aecc">@<span class="a">A</span><span class="e">E</span><span class="c1">C</span><span class="c2">C</span>-UPRRP</a> <span class="arrow">➜</span> <span class="path">~/website/index.html</span><span class="blink">▇</span>
+      <div class="aecc-container">
+         <a href="/" title="homepage" class="aecc">@<span class="a">A</span><span class="e">E</span><span class="c1">C</span><span class="c2">C</span>-UPRRP</a>
+         <span class="arrow">➜</span>
+         <!-- el path cambiaria a la página actual -->
+         <span class="path">~/website/index.html</span><span class="blink">▇</span>
+      </div>
 
       <!-- nav links -->
-      <nav><a href="/">about</a> <a href="/">join</a> <a href="/">activities</a> <a href="/">links</a>
-      </nav>
-
-      <button>theme</button>
+      <div class="links-container">
+         <nav>
+            <a href="/">about</a> <a href="/">join</a> <a href="/">activities</a> <a href="/">links</a>
+         </nav>
+         <button class="theme-toggle" onclick="toggleCSS()">theme</button>
+      </div>
    </header>
 
    <div id="wrapper">
       <div id="logo" class="box">
          <h1>Asociación Estudiantil de Ciencia de Cómputos</h1>
-         <img src="assets/aecc-logo.png" alt="AECC official logo" width="200px">
+         <img src="assets/catppuccin.png" alt="AECC official logo" width="200px">
          <p>Cat ipsum dolor sit amet, cats are cute trip on catnip but rub my belly hiss. Lounge in doorway hiss at vacuum cleaner shake treat bag. Small kitty warm kitty little balls of fur. Suddenly go on wild-eyed crazy rampage pushes butt to face but the best thing in the universe is a cardboard box ooooh feather moving feather! so i could pee on this if i had the energy, please stop looking at your phone and pet me. Destroy couch i rule on my back you rub my tummy i bite you hard sit by the fire but slap owner's face at 5am until human fills food dish get poop stuck in paws jumping out of litter box and run around the house scream meowing and smearing hot cat mud all over so lick face hiss at owner.</p>
       </div>
 
@@ -38,5 +51,7 @@
       </div>
    </div>
 </body>
+
+<script src="theme-changer.js"></script>
 
 </html>
