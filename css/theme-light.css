@@ -15,10 +15,20 @@
 	--border: 1px solid var(--text-s);
 }
 
+a {
+	color: black;
+}
+
 .aecc-container {
 	a.aecc {
 		text-decoration: none;
 		background: var(--text);
 		color: var(--background);
+	}
+}
+
+.picture-box {
+	.caption {
+		background: var(--text);
 	}
 }

@@ -19,7 +19,7 @@ a {
 	cursor: pointer;
 	padding: 0 1ch;
 	color: var(--background);
-	background: var(--cyan-s);
+	background: var(--cyan);
 
 	&:hover {
 		text-decoration: underline;
@@ -117,18 +117,31 @@ nav {
 	margin: 20px 10px;
 	display: grid;
 	grid-template-areas:
-		"logo pic1 pic3"
-		"logo pic2 pic4"
+		"logo pic1 pic2"
+		"logo pic3 pic4"
 		"info info info";
 	grid-template-columns: 33% 33% 31%;
+	grid-template-rows: 300px auto auto;
 	grid-gap: 20px;
 }
 
 .box {
 	padding: 10px;
 	border: var(--border);
+	overflow: auto;
 	p {
 		text-align: left;
+	}
+}
+
+.picture-box {
+	border: var(--border);
+	padding: 10px;
+	overflow: hidden;
+
+	.caption {
+		background: var(--background);
+		padding: 0 1ch;
 	}
 }
 
@@ -142,19 +155,57 @@ nav {
 }
 
 #pic1 {
+	background: url("../assets/pics/natuween2023.png");
+	background-position: center;
 	grid-area: pic1;
+
+	.caption {
+		color: var(--red);
+	}
 }
 
 #pic2 {
+	background: url("../assets/pics/confra2023.JPG");
+	background-position: bottom;
 	grid-area: pic2;
+
+	.caption {
+		color: var(--green);
+	}
 }
 
 #pic3 {
 	grid-area: pic3;
+	background: url("../assets/pics/competencia_bayamon.png");
+	background-position: center bottom;
+
+	.caption {
+		color: var(--cyan);
+	}
 }
 
 #pic4 {
 	grid-area: pic4;
+	background: url("../assets/pics/hackton.JPG");
+	background-position: center;
+
+	.caption {
+		color: var(--pink);
+	}
+}
+
+#pic1,
+#pic2,
+#pic3,
+#pic4 {
+	background-color: var(--text);
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	&:hover {
+		background-size: contain;
+		background-position: center;
+	}
 }
 
 #info {
@@ -165,10 +216,10 @@ nav {
 
 @font-face {
 	font-family: "vt323";
-	src: url(assets/VT323.ttf);
+	src: url(../assets/VT323.ttf);
 }
 
 @font-face {
 	font-family: "mononoki";
-	src: url(assets/mononoki.ttf);
+	src: url(../assets/mononoki.ttf);
 }

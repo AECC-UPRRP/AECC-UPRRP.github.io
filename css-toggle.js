@@ -1,16 +1,16 @@
 let cssLink = document.querySelector("link.css-link");
 let logo = document.querySelector("#logo img");
 
-console.log(cssLink.getAttribute("href"));
-
 let selectedTheme = localStorage.getItem("theme");
 let selectedLogo = localStorage.getItem("logo");
 
-let lightTheme = "theme-oficial.css";
+// paths
+let lightTheme = "css/theme-light.css";
 let lightLogo = "assets/aecc-logo.png";
-let darkTheme = "theme-catppuccin.css";
-let darkLogo = "assets/catppuccin.png";
+let darkTheme = "css/theme-catppuccin.css";
+let darkLogo = "assets/catppuccin-logo.png";
 
+// theme button toggle
 function toggleCSS() {
 	if (cssLink.getAttribute("href") == lightTheme) {
 		localStorage.setItem("theme", darkTheme);
@@ -25,8 +25,10 @@ function toggleCSS() {
 	}
 }
 
+// loads CSS user selected
 function loadCSS() {
 	if (selectedTheme == null) {
+		// sets theme to light by default
 		localStorage.setItem("theme", lightTheme);
 		localStorage.setItem("logo", lightLogo);
 	} else {
@@ -34,5 +36,4 @@ function loadCSS() {
 		logo.src = selectedLogo;
 	}
 }
-
 loadCSS();
