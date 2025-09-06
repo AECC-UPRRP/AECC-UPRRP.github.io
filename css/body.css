@@ -1,5 +1,6 @@
 * {
 	box-sizing: border-box;
+	position: relative;
 }
 
 ::selection {
@@ -7,22 +8,24 @@
 	background: var(--text);
 }
 
+html {
+	scrollbar-color: var(--text) var(--background);
+}
+
 body {
 	margin: 0;
 	color: var(--text);
 	background: var(--background);
 	font-family: mononoki;
+	transition-duration: 0.5s;
 }
 
 a {
-	text-decoration: none;
+	text-decoration: underline;
 	cursor: pointer;
-	padding: 0 1ch;
-	color: var(--background);
-	background: var(--cyan);
+	color: var(--cyan-s);
 
 	&:hover {
-		text-decoration: underline;
 	}
 }
 
@@ -51,9 +54,24 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	border: var(--border);
-	margin: 10px;
-	padding: 10px;
+	border-bottom: var(--border);
+	margin: 0 0;
+	padding: 20px;
+}
+
+nav {
+	display: inline-block;
+	a {
+		text-decoration: none;
+		cursor: pointer;
+		padding: 0 1ch;
+		color: var(--background);
+		background: var(--cyan-s);
+		&:hover {
+			background: var(--background);
+			color: var(--cyan-s);
+		}
+	}
 }
 
 /* container for terminal text on header */
@@ -63,6 +81,7 @@ header {
 		background: none;
 		color: var(--text);
 		cursor: pointer;
+		padding: 0 1ch;
 	}
 
 	span.a {
@@ -95,10 +114,6 @@ header {
 	}
 }
 
-nav {
-	display: inline-block;
-}
-
 .theme-toggle {
 	display: inline-block;
 }
@@ -114,7 +129,7 @@ nav {
 }
 
 #wrapper {
-	margin: 20px 10px;
+	margin: 20px 40px;
 	display: grid;
 	grid-template-areas:
 		"logo pic1 pic2"
@@ -140,7 +155,7 @@ nav {
 	overflow: hidden;
 
 	.caption {
-		background: var(--background);
+		color: var(--background);
 		padding: 0 1ch;
 	}
 }
@@ -160,7 +175,7 @@ nav {
 	grid-area: pic1;
 
 	.caption {
-		color: var(--red);
+		background: var(--red);
 	}
 }
 
@@ -170,7 +185,7 @@ nav {
 	grid-area: pic2;
 
 	.caption {
-		color: var(--green);
+		background: var(--green);
 	}
 }
 
@@ -180,7 +195,7 @@ nav {
 	background-position: center bottom;
 
 	.caption {
-		color: var(--cyan);
+		background: var(--cyan);
 	}
 }
 
@@ -190,7 +205,7 @@ nav {
 	background-position: center;
 
 	.caption {
-		color: var(--pink);
+		background: var(--pink);
 	}
 }
 
@@ -201,10 +216,10 @@ nav {
 	background-color: var(--text);
 	background-size: cover;
 	background-repeat: no-repeat;
+	transition-duration: 0.5s;
 
 	&:hover {
-		background-size: contain;
-		background-position: center;
+		scale: 1.1;
 	}
 }
 

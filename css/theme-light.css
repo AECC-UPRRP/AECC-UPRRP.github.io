@@ -1,22 +1,18 @@
 /* colores oficiales */
 
 :root {
-	--red: #ff2000;
+	--red: #e73115;
 	--red-s: #bf1800;
 	--green: #d2ff61;
 	--green-s: #9ebf49;
 	--cyan: #25f2e8;
-	--cyan-s: #1cb6ae;
+	--cyan-s: #329a95;
 	--pink: #ea76cb;
 	--pink-s: #bf6299;
-	--background: #f2f4fb;
+	--background: #e8edfd;
 	--text: #1f1e2e;
 	--text-s: #7f7f86;
-	--border: 1px solid var(--text-s);
-}
-
-a {
-	color: black;
+	--border: 1px solid var(--text);
 }
 
 .aecc-container {
@@ -27,8 +23,35 @@ a {
 	}
 }
 
-.picture-box {
+#pic1,
+#pic2,
+#pic3,
+#pic4 {
 	.caption {
 		background: var(--text);
+	}
+}
+
+#pic1 {
+	.caption {
+		color: var(--red);
+	}
+}
+
+#pic2 {
+	.caption {
+		color: var(--green);
+	}
+}
+
+#pic3 {
+	.caption {
+		color: var(--cyan);
+	}
+}
+
+#pic4 {
+	.caption {
+		color: var(--pink);
 	}
 }
