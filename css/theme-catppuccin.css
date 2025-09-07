@@ -1,15 +1,20 @@
 /* colores catppuccin */
 
 :root {
-	--red: #f38ba8ff;
-	--red-s: #d98790ff;
-	--green: rgb(153, 231, 146);
-	--green-s: #a5c999ff;
+	--red: #f38ba8;
+	--red-s: #d98790;
+	--green: #99e792;
+	--green-s: #a5c999;
 	--cyan: #89dcebff;
-	--cyan-s: #84bad1ff;
-	--pink: rgb(236, 177, 221);
-	--pink-s: #dbafc8ff;
+	--cyan-s: #84bad1;
+	--pink: #ecb1dd;
+	--pink-s: #dbafc8;
 	--text: #cdd6f5;
 	--background: #1f1e2e;
 	--border: 1px solid var(--text);
+}
+
+::selection {
+	background: var(--green);
+	color: var(--background);
 }

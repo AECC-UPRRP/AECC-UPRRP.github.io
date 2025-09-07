@@ -3,6 +3,10 @@
 	position: relative;
 }
 
+:root {
+	--fonts: mononoki;
+}
+
 ::selection {
 	color: var(--green);
 	background: var(--text);
@@ -24,16 +28,27 @@ a {
 	text-decoration: underline;
 	cursor: pointer;
 	color: var(--cyan-s);
-
-	&:hover {
-	}
 }
 
 h1,
 h2,
 h3,
 h4 {
+	font-family: vt323, var(--fonts);
+	font-weight: normal;
 	margin: 0;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.5em;
 }
 
 button {
@@ -50,6 +65,8 @@ button {
 	}
 }
 
+/* header section */
+
 header {
 	display: flex;
 	align-items: center;
@@ -57,21 +74,6 @@ header {
 	border-bottom: var(--border);
 	margin: 0 0;
 	padding: 20px;
-}
-
-nav {
-	display: inline-block;
-	a {
-		text-decoration: none;
-		cursor: pointer;
-		padding: 0 1ch;
-		color: var(--background);
-		background: var(--cyan-s);
-		&:hover {
-			background: var(--background);
-			color: var(--cyan-s);
-		}
-	}
 }
 
 /* container for terminal text on header */
@@ -114,32 +116,41 @@ nav {
 	}
 }
 
-.theme-toggle {
+nav {
+	display: inline-block;
+	a {
+		text-decoration: none;
+		cursor: pointer;
+		padding: 0 1ch;
+		color: var(--background);
+		background: var(--cyan-s);
+		&:hover {
+			background: var(--background);
+			color: var(--cyan-s);
+		}
+	}
+}
+
+/* theme toggle button */
+
+button.theme-toggle {
 	display: inline-block;
 }
 
-/* animacion para el blink del header */
-@keyframes blink {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
 #wrapper {
-	margin: 20px 40px;
+	margin: 20px 50px;
 	display: grid;
 	grid-template-areas:
 		"logo pic1 pic2"
 		"logo pic3 pic4"
-		"info info info";
+		"h2 h2 h2"
+		"info1 info2 info3";
 	grid-template-columns: 33% 33% 31%;
 	grid-template-rows: 300px auto auto;
 	grid-gap: 20px;
 }
 
+/* class for info boxes */
 .box {
 	padding: 10px;
 	border: var(--border);
@@ -147,18 +158,41 @@ nav {
 	p {
 		text-align: left;
 	}
+
+	h3 {
+		margin: 0;
+		padding: 1ch;
+		background: var(--text);
+		color: var(--background);
+
+		&::before {
+			content: "> ";
+		}
+
+		&::after {
+			content: "_";
+		}
+	}
 }
 
+/* class for picture boxes */
 .picture-box {
 	border: var(--border);
 	padding: 10px;
 	overflow: hidden;
+
+	&:hover {
+		scale: 1.1;
+		z-index: 5;
+	}
 
 	.caption {
 		color: var(--background);
 		padding: 0 1ch;
 	}
 }
+
+/* sections of the grid */
 
 #logo {
 	grid-area: logo;
@@ -209,6 +243,7 @@ nav {
 	}
 }
 
+/* same background properties for all boxes */
 #pic1,
 #pic2,
 #pic3,
@@ -217,14 +252,42 @@ nav {
 	background-size: cover;
 	background-repeat: no-repeat;
 	transition-duration: 0.5s;
-
-	&:hover {
-		scale: 1.1;
-	}
 }
 
 #info {
-	grid-area: info;
+	grid-area: h2;
+	text-align: center;
+}
+
+#info1 {
+	grid-area: info1;
+}
+
+#info2 {
+	grid-area: info2;
+}
+
+#info3 {
+	grid-area: info3;
+}
+
+footer {
+	margin: 40px;
+
+	pre {
+		font-family: var(--fonts);
+	}
+}
+
+/* animacion para el blink del header */
+
+@keyframes blink {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 /* fonts */

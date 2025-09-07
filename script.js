@@ -1,6 +1,7 @@
 let cssLink = document.querySelector("link.css-link");
 let logo = document.querySelector("#logo img");
 
+// localStorage
 let selectedTheme = localStorage.getItem("theme");
 let selectedLogo = localStorage.getItem("logo");
 
@@ -25,10 +26,10 @@ function toggleCSS() {
 	}
 }
 
-// loads CSS user selected
+// loads user selected CSS
 function loadCSS() {
 	if (selectedTheme == null) {
-		// sets theme to light by default
+		// sets theme to light by default. because that's what the HTML has loaded
 		localStorage.setItem("theme", lightTheme);
 		localStorage.setItem("logo", lightLogo);
 	} else {
@@ -36,4 +37,12 @@ function loadCSS() {
 		logo.src = selectedLogo;
 	}
 }
+
 loadCSS();
+
+// ~~~~~~~~ header terminal path name
+
+let pathSpan = document.querySelector("span.path");
+
+let path = window.location.pathname; // gets current URL path
+pathSpan.textContent += path;
