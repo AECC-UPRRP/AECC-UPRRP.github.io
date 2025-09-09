@@ -45,4 +45,6 @@ loadCSS();
 let pathSpan = document.querySelector("span.path");
 
 let path = window.location.pathname; // gets current URL path
-pathSpan.textContent += path;
+
+if (path == "/") pathSpan.textContent += "/index.html";
+else pathSpan.textContent += path;
