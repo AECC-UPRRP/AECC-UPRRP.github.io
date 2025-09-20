@@ -155,7 +155,11 @@ button.theme-toggle {
 	padding: 10px;
 	border: var(--border);
 	overflow: auto;
+
 	p {
+		&::first-letter {
+			text-decoration: underline;
+		}
 		text-align: left;
 	}
 
