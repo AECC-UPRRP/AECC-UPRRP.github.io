@@ -144,9 +144,11 @@ button.theme-toggle {
 		"logo pic1 pic2"
 		"logo pic3 pic4"
 		"h2 h2 h2"
-		"info1 info2 info3";
-	grid-template-columns: 33% 33% 31%;
-	grid-template-rows: 300px auto auto;
+		"info1 info2 info3"
+		"calendarh calendarh calendarh"
+		"calendar calendar calendar";
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 300px auto auto auto auto 500px;
 	grid-gap: 20px;
 }
 
@@ -230,7 +232,7 @@ button.theme-toggle {
 #pic3 {
 	grid-area: pic3;
 	background: url("../assets/pics/competencia_bayamon.png");
-	background-position: center bottom;
+	background-position: center center;
 
 	.caption {
 		background: var(--cyan);
@@ -273,6 +275,22 @@ button.theme-toggle {
 
 #info3 {
 	grid-area: info3;
+}
+
+#calendarh {
+	grid-area: calendarh;
+	text-align: center;
+}
+#calendar {
+	border: none;
+	overflow: hidden;
+	grid-area: calendar;
+	iframe {
+		max-width: 800px;
+		display: block;
+		margin: auto;
+		border: 8px double var(--text);
+	}
 }
 
 footer {
